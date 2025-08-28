@@ -1,0 +1,80 @@
+/* src/index.css */
+:root {
+  --bg: #0f172a;
+  --card: #111827;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --brand: #6366f1;
+}
+
+* { box-sizing: border-box; }
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: linear-gradient(180deg, #0b1220 0%, #0f172a 100%);
+  color: var(--text);
+}
+
+a { color: inherit; text-decoration: none; }
+.container { max-width: 960px; margin: 0 auto; padding: 24px; }
+
+/* simple nav styling */
+.nav {
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(8px);
+  background: rgba(15, 23, 42, 0.6);
+  border-bottom: 1px solid rgba(99, 102, 241, 0.25);
+}
+
+/* Home */
+
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 12px 24px;
+}
+
+.brand {
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.links {
+  margin-left: auto;
+  display: flex;
+  gap: 12px;
+}
+
+.link {
+  padding: 8px 12px;
+  border-radius: 10px;
+  transition: background 0.2s ease;
+  color: var(--muted);
+}
+
+.link.active {
+  color: white;
+  background: rgba(99, 102, 241, 0.2);
+  border: 1px solid rgba(99, 102, 241, 0.35);
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 10px 18px rgba(0,0,0,0.25);
+}
