@@ -40,16 +40,16 @@ function DashBoard() {
 
   return (
     <div className={styles.dashboardContainer}>
-      {/* Sidebar Toggle Button */}
-      <button 
-        className={`${styles.sidebarToggle} ${isSidebarOpen ? styles.open : ''}`}
-        onClick={toggleSidebar}
-      >
-        {isSidebarOpen ? <LeftArrow /> : <RightArrow />}
-      </button>
-
       {/* Glass Effect Sidebar */}
       <div className={`${styles.sidebar} ${isSidebarOpen ? styles.sidebarOpen : styles.sidebarClosed}`}>
+        {/* Sidebar Toggle Button positioned on the edge */}
+        <button 
+          className={`${styles.sidebarToggle} ${isSidebarOpen ? styles.open : ''}`}
+          onClick={toggleSidebar}
+        >
+          {isSidebarOpen ? <LeftArrow /> : <RightArrow />}
+        </button>
+
         <div className={styles.sidebarContent}>
           {/* Logo Section */}
           <div className={styles.logoSection}>
